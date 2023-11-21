@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import React, { useState } from 'react';
 import './App.css';
+import TextBoxComponent from './components/TextBoxComponent';
 
 function App() {
   return (
@@ -17,10 +18,15 @@ function App() {
         >
           Create password
         </a>
+
+        <TextBoxComponent />
       </header>
       <body>
         <div id="root"></div>
         <script src="path-to-your-bundle.js"></script>
+
+
+
       </body>
     </div>
   );
