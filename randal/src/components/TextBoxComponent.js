@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import RandomCharacterGenerator from './RandomCharacterGenerator';
 
 const TextBoxComponent = () => {
   const [inputValue, setInputValue] = useState('');
@@ -7,11 +8,16 @@ const TextBoxComponent = () => {
     setInputValue(event.target.value);
   };
 
+  const handleGenerateCharacter = (character) => {
+    console.log(`Generated character: ${character}`);
+    // You can perform additional actions with the generated character here
+  };
+
   return (
     <div>
       <input
         type="text"
-        value={inputValue}
+        value={<RandomCharacterGenerator onGenerateCharacter={handleGenerateCharacter} />}
         onChange={handleInputChange}
         placeholder="Password appears here..."
       />
